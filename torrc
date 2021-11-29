@@ -1,0 +1,6 @@
+SocksPort 127.0.0.1:9050
+ControlPort 127.0.0.1:9151
+UseMicrodescriptors 0
+
+## generate a hash using the command "tor --hash-password password"
+# HashedControlPassword <hash goes here>
