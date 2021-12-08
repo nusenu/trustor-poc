@@ -19,6 +19,7 @@ It supports a `max_depth` of 0 [only](https://nusenu.github.io/tor-relay-operato
 * reads the trust configuration and validation cache
 * connects to a local tor client via it's ControlPort to find relays claiming to be from a trusted operator
 * validates claims via HTTPS (routed via tor) or DNS including DNSSEC check (can also be routed via tor but requires dnscrypt-proxy)
+ * dnscrypt-proxy might not yet perform local DNSSEC validation, see: https://github.com/DNSCrypt/dnscrypt-proxy/discussions/1954 / https://github.com/DNSCrypt/dnscrypt-proxy/issues/167#issuecomment-367689381
 * writes a validation cache to disk
 * configures the local tor client (non-persistently) to only use exits from trusted operators that passed the validation steps
 
