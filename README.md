@@ -1,5 +1,8 @@
+This proof of concept tool has been released with the related blog post:
 
-This is a partial and quick and dirty proof of concept implementation of
+[Is KAX17 performing de-anonymization Attacks against Tor Users?](https://nusenu.medium.com/is-kax17-performing-de-anonymization-attacks-against-tor-users-42e566defce8)
+
+It is a partial and quick and dirty proof of concept implementation of
 the following specifications to configure a tor client to use trusted exit relays only.
 
 
@@ -7,14 +10,13 @@ the following specifications to configure a tor client to use trusted exit relay
 * https://gitlab.torproject.org/tpo/core/torspec/-/blob/main/proposals/326-tor-relay-well-known-uri-rfc8615.md
 * https://nusenu.github.io/tor-relay-operator-ids-trust-information (WIP DRAFT)
 
-
-**NOTE: This PoC is NOT fit for general use and not meant to be used by end-users!**
+**NOTE: This proof of concept is NOT fit for general use and not meant to be used by end-users!**
 
 This limited version only selects exit relays and leaves other positions unchanged.
-It supports a `max_depth` of 0 [only](https://nusenu.github.io/tor-relay-operator-ids-trust-information/#trust-information-consumers) (no recusion to find trusted operators).
+It supports a `max_depth` of 0 [only](https://nusenu.github.io/tor-relay-operator-ids-trust-information/#trust-information-consumers) 
+(no recusion to find trusted operators).
 
-
-## this PoC performs the following steps
+## this proof of concept code performs the following steps
 
 * reads the trust configuration and validation cache
 * connects to a local tor client via it's ControlPort to find relays claiming to be from a trusted operator
